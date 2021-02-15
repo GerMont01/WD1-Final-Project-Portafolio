@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <!-- Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+        <!-- Fontawesome -->
+        <!-- <script src="https://kit.fontawesome.com/a076d05399.js"></script>  -->
+        <script src="https://use.fontawesome.com/releases/v5.15.2/js/all.js" data-auto-replace-svg="nest"></script>
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  
+    </head>
+    <body>
+        <video autoplay muted loop id="myVideo">
+            <source src="./Fotos/video2.mp4" type="video/mp4">
+        </video>
+        <div class="containerfluid bg">
+            <div class="row bgimg" id="home1">
+                <div class="col-md-1 sidebar">
+                    <p><span id="g1">G</span><span id="m1">M</span></p>
+                    <nav>
+                        <a title="Home" href="#home1"><i class="fas fa-home"></i><span id="home"></span></a>
+                        <a title="About me" href= "#about1"><i class="far fa-user"></i><span id="about"></span></a>
+                        <a title="Projects" href="#projects1"><i class="fas fa-code"></i><span id="projects"></span></a>
+                        <a title="Contact" href="#contactme"><i class="far fa-address-card"></i><span id="contact"></span></a> 
+                    </nav>
+                    <div class="links">
+                        <a title="Github" target="_blank" href="https://github.com/GerMont01"><i class="fab fa-github"></i><span id="github"></span></a>
+                        <a title="Facebook" target="_blank" href="https://www.facebook.com/gerardo.montero.334839/"><i class="fab fa-facebook-f"></i><span id="facebook"></span></a>
+                        <a title="LinkedIn" target="_blank" href="https://www.linkedin.com/in/gerardo-montero-mejia-276040161/"><i class="fab fa-linkedin-in"></i><span id="linkedin"></span></a>
+                    </div>
+                </div>
+                <div class="col-md-12 home">
+                    <header class="header">
+                        <p id="hi"></p><p class="welcome" id="wc"></p>
+                    </header>
+                    <div class="scrolldn">
+                        <p class="scrolld">Scroll Down or use the Menu on the left</p>
+                        <i class="fas fa-chevron-down arrowd"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="about1">
+                <h1>About Me</h1> 
+                <div class="col-md-12">
+                    <figure>
+                        <div class="img1"></div>
+                    </figure>
+                    <section>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit nesciunt fugiat harum aperiam obcaecati sed ratione, autem nobis natus fugit corporis vitae eos, reiciendis velit? Vel illo sed consequatur amet.</p>  
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt placeat error, tempore quas nam nisi molestiae velit sit sint, illum dicta non exercitationem ullam. Odit cupiditate consequuntur omnis sunt quos!</p> 
+                    </section>
+                    <figure>
+                        <div class="img2"></div>
+                    </figure>
+                    <section>
+                        <h2>My Skills</h2>
+                        <div class="charts">
+                            <div>
+                                <h3>HTML</h3>
+                                <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862">
+                                    <circle class="c_background" stroke="#0004" stroke-width="2" fill="none" cx="16.91549431" cy="16.91549431" r="14"/>
+                                    <circle class="c_circle" stroke="#e62e00" stroke-width="2" stroke-dasharray="75" fill="none" cx="16.91549431" cy="16.91549431" r="14"/>
+                                    <g class="c_info">
+                                        <text class="c_percent" x="10" y="20" fill="white">90%</text>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3>CSS</h3>
+                                <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862">
+                                    <circle class="c_background" stroke="#0004" stroke-width="2" fill="none" cx="16.91549431" cy="16.91549431" r="14"/>
+                                    <circle class="c_circle" stroke="#00acc1" stroke-width="2" stroke-dasharray="75" fill="none" cx="16.91549431" cy="16.91549431" r="14"/>
+                                    <g class="c_info">
+                                        <text class="c_percent" x="10" y="20" fill="white">90%</text>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3>JS</h3>
+                                <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862">
+                                    <circle class="c_background" stroke="#0004" stroke-width="2" fill="none" cx="16.91549431" cy="16.91549431" r="14"/>
+                                    <circle class="c_circle" stroke="#ffcc00" stroke-width="2" stroke-dasharray="55" fill="none" cx="16.91549431" cy="16.91549431" r="14"/>
+                                    <g class="c_info">
+                                        <text class="c_percent" x="10" y="20" fill="white">60%</text>
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>    
+                    </section>
+                </div>
+            </div>
+            <div class="row" id="projects1">
+                <h1>My Projects</h1>
+                <div class="col-md-11 column">
+                    <div class="cont">
+                        <div class="pj1">
+                            <div class="content">
+                                <h2>Abibas Website</h2>
+                                <p>This website was the first I created. The goal was to replicate and improve the UI from Adidas and Nike Websites <a href="#"> Visit Website</a></p>
+                            </div>
+                        </div>
+                        <div class="pj2">
+                            <div class="content">
+                                <h2>Photo Sharing W</h2>
+                                <p>This website was my second creation. The main feature is a type of carousel activated by hovering over smaller images <a href="#"> Visit Website</a></p>
+                            </div>
+                        </div>  
+                        <div class="pj3">
+                            <div class="content">
+                                <h2>Abibas Website</h2>
+                                <p>This website was the first I created. The goal was to replicate and improve the UI from Adidas and Nike Websites <a href="#"> Visit Website</a></p>
+                            </div>
+                        </div>  
+                    </div> 
+                </div>
+            </div>    
+            <div class="row" id="contactme">
+                <div class="col-md-12">
+                    <h1>Contact Me</h1>
+                    <h2>Interested in starting a project or just getting in touch?<br>Fill up the form or send me an e-mail to: <span>gerardomontme@gmail.com</span></h2><br>
+                    <form class="needs-validation" novalidate>
+                        <div class="form-floating mb-3">
+                            <input type="name" class="form-control" id="floatingInput" placeholder="name" required>
+                            <label for="floatingInput">Name</label>
+                        </div>
+                        <div class="form-floating">
+                            <input type="email" class="form-control" id="floatingInput" placeholder="E-mail address" required>
+                            <label for="floatingPassword">E-mail address</label>
+                        </div><br>
+                        <div class="form-floating">
+                            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 80px"></textarea>
+                            <label for="floatingTextarea2">Comments</label>
+                          </div><br>
+                        <button class="btn btn-outline-warning" type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+            <div class="row footer">
+                <a href="#home1"><i class="fas fa-angle-double-up"></i></a>
+                <h5>Gerardo Montero © | 2021</h5>
+            </div>
+        </div>
+        <script src="script.js"></script> 
+        <script type="text/javascript" src="vanilla-tilt.js"></script>
+        <script>
+            VanillaTilt.init(document.querySelectorAll("figure"), {
+                max: 5,
+                speed: 100,
+                glare: true,
+                "max-glare": 0.5
+            });
+            VanillaTilt.init(document.querySelectorAll("section"), {
+                max: 5,
+                speed: 100,
+                glare: true,
+                "max-glare": 0.5
+            });
+        </script>
+    </body>
+</html>
