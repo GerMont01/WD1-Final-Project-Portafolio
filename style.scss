@@ -54,7 +54,6 @@ body {
     }
     a {
         margin: 0 auto;
-        // font-family: Baskerville Old Face;
         font-family: Raleway;
         text-decoration: none;
     }
@@ -269,7 +268,7 @@ body {
         padding-left: 5vh;
     }
     h1 {
-        margin: 5vh;
+        margin: 10vh;
         margin-left: 20vh;
         width: fit-content;
         border-bottom: solid 2px;
@@ -461,4 +460,11 @@ body {
         margin-top: 2vh;
         font-size: 1em;
     }  
+}
+
+a:hover {
+    transform: scale(1.2);
+    i, span {
+        color: rgb(255, 134, 21);
+    }
 }

@@ -426,7 +426,7 @@ body {
 }
 
 #projects1 h1 {
-  margin: 5vh;
+  margin: 10vh;
   margin-left: 20vh;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -681,5 +681,14 @@ body {
 .footer h5 {
   margin-top: 2vh;
   font-size: 1em;
+}
+
+a:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+a:hover i, a:hover span {
+  color: #ff8615;
 }
 /*# sourceMappingURL=style.css.map */
