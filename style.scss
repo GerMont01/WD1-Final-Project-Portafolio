@@ -1,18 +1,30 @@
 @import './images';
 @import './effects';
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+
+// All links and icons on hover
+a:hover {
+    transform: scale(1.2);
+    i, span {
+        color: $color1;
+    }
+}
+
+
+// Scrollbar------------------------------------------
 ::-webkit-scrollbar {
     width: 5px;
   }
+::-webkit-scrollbar-track {
+    background: #000000;
+}
 ::-webkit-scrollbar-thumb {
     background: #888; 
 }
-body {
-    background-color: black !important;
-}
+
+// BackGround Video----------------------------------
 #myVideo {
     position: fixed;
-    // position: absolute;
     object-fit: cover;
     width: 100%;
     height: 100vh;
@@ -20,20 +32,23 @@ body {
     left: 0;
     z-index: -1;
 }
+
+// Container Fluid----------------------------------- 
 .bg {
     transition: 1s all;
     background-color: rgba(0, 0, 0, 0.678);
-    color: rgb(221, 221, 221);
-    // font-family: Baskerville Old Face;
+    color: $color2;
     font-family: Raleway;
 
 }
 
-.bgimg {
+// Home Row ------------------------------------------ 
+#home1 {
         margin-right: 0 !important;
         height: 110vh !important;
     }
 
+// Sidebar--------------
 .sidebar {
     z-index: 10;
     opacity: 0;
@@ -43,13 +58,21 @@ body {
     display: flex;
     flex-direction: column;
     background-color: rgba(255, 255, 255, 0.027);
+    @media (max-height: 450px) {
+        a {
+            font-size: 12px; 
+        }
+        p {
+            font-size: 17px;
+        }
+    }
     p {
-        text-shadow: 0 0 2px rgb(165, 165, 165);
+        text-shadow: 1px 1px 2px rgb(48, 26, 0);
         font-size: 28px;
         margin: 2vh auto;
-        color:rgb(221, 221, 221);
+        color:$color2;
         #g1 {
-        color:rgb(255, 134, 21);
+        color:$color1;
         }
     }
     a {
@@ -62,7 +85,7 @@ body {
         font-size: 20px;
         a {
             padding: 3vh 0;
-            color:rgb(221, 221, 221);
+            color:$color2;
         }
     }
     nav, .links {
@@ -76,23 +99,13 @@ body {
         margin-bottom: 1vh;
         a {
             padding: 2vh 0;
-            color:rgb(255, 134, 21);
+            color:$color1;
         }
     }
     
 }
-@media (max-height: 450px) {
-    .sidebar {
-        a {
-           font-size: 12px; 
-        }
-        p {
-            font-size: 17px;
-        }
-    }
 
-}
-
+// Header and scroll label -----
 .home {
     display: flex;
     flex-direction: column;
@@ -115,17 +128,17 @@ body {
             text-align: right;
         }
         :first-child {
-            text-shadow: 1px 1px 2px rgb(22, 12, 0);
+            text-shadow: 1px 1px 2px rgb(48, 26, 0);
             letter-spacing: -1px;
             &::first-letter {
-                color: rgb(255, 134, 21);
+                color: $color1;
             }
         }
         .welcome {
-            color: rgb(255, 134, 21);
+            color: $color1;
             font-size: 1.2em;
             font-weight: bold;
-            text-shadow: 1px 1px rgb(22, 12, 0);
+            text-shadow: 1px 1px 3px rgb(48, 26, 0);
         }
     }
     .scrolldn {
@@ -136,32 +149,10 @@ body {
         opacity: 0;
         width: 60%;
         transition: 0.1s;
-    } 
-    nav {
-        height: 100%;
-        display: inherit;
-        align-items: flex-end;
-        justify-content: flex-end;
-        padding: 10vh;
-        a {
-            text-decoration: none;
-            color: inherit;
-            font-size: 30px;
-            margin-left: 5vh;  
-            &::first-letter {
-                color: rgb(255, 134, 21);
-            } 
-        }
-        i {
-            position: absolute;
-            font-size: 20px;
-            margin: 2vh;
-            bottom: 0;
-            right: 0;
-        }
     }
 }
 
+//  About Row--------------------------------------------
 #about1{
     margin-right: 0 !important;
     display: flex;
@@ -224,29 +215,35 @@ body {
     }
 }
 
+// Circle charts -----------
 .charts {
     position: relative;
-    top: 15vh;
+    top: 10vh;
     display: flex;
     flex-direction: row;
     margin: auto;
     color: beige;
     @media (max-width: 500px) {
         flex-direction: column;
+        top: 2vh;
+        .circle-chart {
+            width: 40% !important;
+        } 
+    }
+    div {
+        width: 100%;
+        text-align: center;
+    }
+    .circle-chart{
+        margin: auto;
+        width: 80%;
+        height: 80%;
+    }
+    .c_info .c_percent {
+        font-size: 0.5em;
     }
 }
-.charts div {
-    width: 100%;
-    text-align: center;
-}
-.circle-chart{
-    margin: auto;
-    width: 80%;
-    height: 80%;
-}
-.c_percent {
-    font-size: 0.5em;
-}
+
 @keyframes circle-chart-fill {
     to { stroke-dasharray: 0 100; }
 }
@@ -258,7 +255,7 @@ body {
     }
 }
 
-
+// Projects Row -------------------------------------------
 #projects1 {
     margin-top: 30vh;
     margin-right: 0 !important;
@@ -342,7 +339,7 @@ body {
                     transition: 0.2s;
                     font-size: 1.5vw;
                     a {
-                        color: rgb(255, 134, 21);
+                        color: $color1;
                     }
                 }
             } 
@@ -388,6 +385,8 @@ body {
         }
     }  
 }
+
+// Contact Me Row ------------------------------------------
 #contactme {
     padding-top: 30vh;
     padding-bottom: 30vh;
@@ -422,7 +421,7 @@ body {
         font-size: 1em;
         color:rgb(221, 221, 221);
         span {
-            color: rgb(255, 134, 21);
+            color: $color1;
         }
     }
     form {
@@ -442,6 +441,7 @@ body {
         width: 100%;
     }
 }
+// Footer Row -------------------------------------------
 .footer {
     text-align: center;
     background-color: transparent;
@@ -451,7 +451,7 @@ body {
         width: fit-content;
         margin: auto;
         background-color: rgba(255, 255, 255, 0.096);
-        color: rgb(255, 134, 21);
+        color: $color1;
         font-size: 5vh;
         padding: 0 2vh;
         z-index: 1
@@ -460,11 +460,4 @@ body {
         margin-top: 2vh;
         font-size: 1em;
     }  
-}
-
-a:hover {
-    transform: scale(1.2);
-    i, span {
-        color: rgb(255, 134, 21);
-    }
 }

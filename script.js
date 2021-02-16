@@ -1,17 +1,7 @@
-
-// sidebar effect
+// sidebar effect -------------------------------------------------
 $(".sidebar").addClass("sidebarwidth");
 var flag = false;
-$(".sidebar").mouseover(function(){
-    $(".sidebar").removeClass("sidebarwidth");
-    if (flag == false){
-        $(".sidebar").animate({width: "40vh"}, 1000);
-        $("#about1").animate({opacity: 0.4}, 1000);
-        $("#projects1").animate({opacity: 0.4}, 1000);
-        setTimeout(function(){
-            wait();
-        }, 1000); 
-        function wait(){
+function wait(){
             var g1 = "Gerardo "        
             document.getElementById("g1").innerHTML = g1;
             var m1 = "Montero"        
@@ -33,7 +23,18 @@ $(".sidebar").mouseover(function(){
             $(".sidebar a").addClass("sidebareffect");
             flag = true;  
         }
-         
+$(".sidebar").mouseover(function(){
+    $(".sidebar").removeClass("sidebarwidth");
+    if (flag == false){
+        $(".sidebar").animate({width: "40vh"}, 1000);
+        $("#about1").animate({opacity: 0.1}, 1000);
+        $("#projects1").animate({opacity: 0.1}, 1000);
+        $(".home").animate({opacity: 0.1}, 1000);
+        $("#contactme").animate({opacity: 0.1}, 1000); 
+        $(".footer").animate({opacity: 0.1}, 1000);
+        setTimeout(function(){
+            wait();
+        }, 1000);  
     }
     
 });
@@ -62,12 +63,15 @@ $(".sidebar").mouseleave(function(){
         $(".sidebar").animate({width: "15vh"}, 1000);
         $("#about1").animate({opacity: 1}, 1000);
         $("#projects1").animate({opacity: 1}, 1000);
+        $(".home").animate({opacity: 1}, 1000);
+        $("#contactme").animate({opacity: 1}, 1000); 
+        $(".footer").animate({opacity: 1}, 1000);
         flag = false; 
     }
 });
 
+// Headers Effect ------------------------------------------------
 var i = 0;
-var x = 0; 
 function myLoop2() { 
     var disp1 = ["H","i",","," ","m","y"," ","n","a","m","e"," ","i","s"," ","G","e","r","a","r","d","o"," ","a","n","d"," ","I"," ","a","m"," ","a"," ","F","r","o","n","t","-","E","n","d"," ","D","e","v","e","l","o","p","e","r"]                   
     var hi = document.getElementById("hi");      
@@ -102,6 +106,8 @@ function myLoop3() {
                        
     }, 100)
 }
+
+// Scrolling effects -----------------------------------------------------
 $(window).scroll(function () {
     if ($(this).scrollTop() > 300) {
         $(".scrolldn").addClass("opac")
@@ -115,13 +121,6 @@ $(window).scroll(function () {
     else {
         $("#about1 h1").removeClass("headerseffect");      
     }
-    if ($(this).scrollTop() < 700 || $(this).scrollTop() > 2200) {
-        $(".bg").removeClass("bgcolor");
-        $(".sidebar").removeClass("sidebarcolor");
-        $(".sidebar p").removeClass("textcolor");
-        $(".sidebar nav a").removeClass("textcolor");
-        
-     }
      if ($(this).scrollTop() > 1800) {
         $(".c_circle").addClass("c_circle_anim");
         $(".c_info").addClass("c_info_anim");
@@ -132,7 +131,7 @@ $(window).scroll(function () {
      }
 });
 
-// Example starter JavaScript for disabling form submissions if there are invalid fields
+// Disabling form submissions if there are invalid fields
 (function () {
     'use strict'
   
