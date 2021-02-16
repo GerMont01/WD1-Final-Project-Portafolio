@@ -34,11 +34,9 @@
 
 .headerseffect {
   opacity: 1 !important;
-  -webkit-transform: translate3d(5vw, 30vw, 0);
-          transform: translate3d(5vw, 30vw, 0);
   position: -webkit-sticky;
   position: sticky;
-  top: -28vw;
+  top: 5vh;
 }
 
 .opac {
@@ -203,6 +201,14 @@ body {
   width: 60%;
   font-size: 5vh;
   text-align: center;
+}
+
+@media (max-width: 1050px) {
+  .home .header {
+    width: 80%;
+    padding-bottom: 20vh;
+    text-align: right;
+  }
 }
 
 .home .header :first-child {
