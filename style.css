@@ -601,6 +601,23 @@ body {
   text-align: center;
 }
 
+@media (max-width: 1050px) {
+  #contactme {
+    text-align: right;
+    padding-right: 5vw;
+  }
+  #contactme h2 {
+    width: 70% !important;
+    margin-left: 20vw !important;
+  }
+  #contactme h2 span {
+    margin: 0 !important;
+  }
+  #contactme form {
+    margin-right: 5vw !important;
+  }
+}
+
 #contactme h1 {
   margin: auto;
   width: -webkit-fit-content;
