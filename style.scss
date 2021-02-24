@@ -16,7 +16,7 @@ a:hover {
     width: 5px;
   }
 ::-webkit-scrollbar-track {
-    background: #000000;
+    background: rgb(0, 0, 0);
 }
 ::-webkit-scrollbar-thumb {
     background: #888; 
@@ -50,10 +50,11 @@ a:hover {
 
 // Sidebar--------------
 .sidebar {
+    overflow-y: hidden;
     z-index: 10;
     opacity: 0;
     position: fixed;
-    height: 100%;
+    height: 10%;
     padding-right: 0 !important;
     display: flex;
     flex-direction: column;
@@ -66,10 +67,23 @@ a:hover {
             font-size: 17px;
         }
     }
+    .menu {
+        margin-left: 3vh;
+        padding: 2vh;
+        font-size: 24px;
+        z-index: 50;
+    }
+    .closemenu {
+        position: absolute;
+        opacity: 0;
+        margin-left: 3vh;
+        padding: 2vh;
+        font-size: 24px;
+    }
     p {
         text-shadow: 1px 1px 2px rgb(48, 26, 0);
         font-size: 28px;
-        margin: 2vh auto;
+        margin: 1vh auto;
         color:$color2;
         #g1 {
         color:$color1;
@@ -100,6 +114,7 @@ a:hover {
         a {
             padding: 2vh 0;
             color:$color1;
+            text-shadow: 1px 1px 1px rgb(48, 26, 0);
         }
     }
     
@@ -107,6 +122,13 @@ a:hover {
 
 // Header and scroll label -----
 .home {
+    .colorchange {
+        position: absolute;
+        top: 2vh;
+        right: 2vh;
+        color: $color2;
+        font-size: 25px;
+    }
     display: flex;
     flex-direction: column;
     text-align: left;
@@ -314,6 +336,7 @@ a:hover {
             transform: perspective(800px) rotateY(30deg);
             transition: 0.5s;
             -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, #0004);
+            color: $color2;
             .content {
                 transform: inherit;
                 margin: 0;
@@ -411,7 +434,7 @@ a:hover {
     h1 {
         margin: auto;
         width: fit-content;
-        color:rgb(221, 221, 221);
+        color: $color2;
         margin-bottom: 10vh;
         border-bottom: solid 2px;
     }
@@ -419,7 +442,7 @@ a:hover {
         width: 100%;
         padding: 0;
         font-size: 1em;
-        color:rgb(221, 221, 221);
+        color: $color2;
         span {
             color: $color1;
         }
@@ -461,3 +484,4 @@ a:hover {
         font-size: 1em;
     }  
 }
+

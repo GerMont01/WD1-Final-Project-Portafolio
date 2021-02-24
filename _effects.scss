@@ -22,3 +22,19 @@
     opacity: 0;
     transform: translateY(0.3em);
 }
+.menueffect {
+    color: $color1;
+    z-index: -1 !important;
+}
+
+// Color change
+.bgcolor {
+    background-color: rgba(255, 255, 255, 0.822) !important;
+}
+.sidebarcolor {
+    background-color: rgba(0, 0, 0, 0.062) !important;
+}
+.textcolor {
+    color: $color3 !important;
+    $currentcolor: 1;
+}

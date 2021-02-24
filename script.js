@@ -1,47 +1,99 @@
+// Color change --------------------------------------------------
+let activecolor = 0;
+$(".colorchange").click(function(){
+    if (activecolor==0){
+        $(".bg").addClass("bgcolor");
+        $(".bg").addClass("textcolor");
+        $(".colorchange").addClass("textcolor");
+        $(".sidebar").addClass("sidebarcolor");
+        $(".sidebar p").addClass("textcolor");
+        $(".sidebar nav a").addClass("textcolor");
+        $("#contactme h1").addClass("textcolor");
+        $("#contactme h2").addClass("textcolor");
+        $(".footer a").addClass("sidebarcolor");
+        activecolor = 1;
+    }
+    else {
+        $(".bg").removeClass("bgcolor");
+        $(".bg").removeClass("textcolor");
+        $(".colorchange").removeClass("textcolor");
+        $(".sidebar").removeClass("sidebarcolor");
+        $(".sidebar p").removeClass("textcolor");
+        $(".sidebar nav a").removeClass("textcolor");
+        $("#contactme h1").removeClass("textcolor");
+        $("#contactme h2").removeClass("textcolor");
+        $(".footer a").removeClass("sidebarcolor");
+        activecolor = 0;
+    }
+});
+
 // sidebar effect -------------------------------------------------
 $(".sidebar").addClass("sidebarwidth");
-var flag = false;
+let flag = false;
 function wait(){
-            var g1 = "Gerardo "        
-            document.getElementById("g1").innerHTML = g1;
-            var m1 = "Montero"        
-            document.getElementById("m1").innerHTML = m1;
-            var home = " Home"        
-            document.getElementById("home").innerHTML = home;
-            var about = " About Me"        
-            document.getElementById("about").innerHTML = about;  
-            var projects = " Projects"        
-            document.getElementById("projects").innerHTML = projects; 
-            var contact = " Contact Me"        
-            document.getElementById("contact").innerHTML = contact;
-            var github = " My Github"        
-            document.getElementById("github").innerHTML = github;  
-            var facebook = " My Facebook"        
-            document.getElementById("facebook").innerHTML = facebook; 
-            var linkedin = " My LinkedIn"        
-            document.getElementById("linkedin").innerHTML = linkedin;
-            $(".sidebar a").addClass("sidebareffect");
-            flag = true;  
-        }
-$(".sidebar").mouseover(function(){
-    $(".sidebar").removeClass("sidebarwidth");
+    var g1 = "Gerardo "        
+    document.getElementById("g1").innerHTML = g1;
+    var m1 = "Montero"        
+    document.getElementById("m1").innerHTML = m1;
+    var home = " Home"        
+    document.getElementById("home").innerHTML = home;
+    var about = " About Me"        
+    document.getElementById("about").innerHTML = about;  
+    var projects = " Projects"        
+    document.getElementById("projects").innerHTML = projects; 
+    var contact = " Contact Me"        
+    document.getElementById("contact").innerHTML = contact;
+    var github = " My Github"        
+    document.getElementById("github").innerHTML = github;  
+    var facebook = " My Facebook"        
+    document.getElementById("facebook").innerHTML = facebook; 
+    var linkedin = " My LinkedIn"        
+    document.getElementById("linkedin").innerHTML = linkedin;
+    $(".sidebar a").addClass("sidebareffect");
+    return true;
+
+}
+$(".menu").click(function(){
     if (flag == false){
-        $(".sidebar").animate({width: "40vh"}, 1000);
-        $("#about1").animate({opacity: 0.1}, 1000);
-        $("#projects1").animate({opacity: 0.1}, 1000);
-        $(".home").animate({opacity: 0.1}, 1000);
-        $("#contactme").animate({opacity: 0.1}, 1000); 
-        $(".footer").animate({opacity: 0.1}, 1000);
+        $(".sidebar").animate({height: "100%"}, 1000);
+        $(".menu").addClass("menueffect");
+        $(".closemenu").removeClass("menueffect");
+        $(".closemenu").animate({opacity: 1}, 200);
+        $(".menu").animate({opacity: 0}, 200);
         setTimeout(function(){
-            wait();
-        }, 1000);  
-    }
-    
+            $(".sidebar").removeClass("sidebarwidth");
+            $(".sidebar").animate({width: "40vh"}, 1000);
+            $("#about1").animate({opacity: 0.1}, 1000);
+            $("#projects1").animate({opacity: 0.1}, 1000);
+            $(".home").animate({opacity: 0.1}, 1000);
+            $("#contactme").animate({opacity: 0.1}, 1000); 
+            $(".footer").animate({opacity: 0.1}, 1000);
+        }, 1000); 
+        setTimeout(function(){
+            flag = wait();
+        }, 2000); 
+    }    
 });
-$(".sidebar").mouseleave(function(){ 
-    $(".sidebar").removeClass("sidebarwidth");
+
+function mouseL() { 
+    $(".sidebar").animate({width: "15vh"}, 1000);
+    $(".sidebar").animate({height: "10%"}, 1000);
+    $("#about1").animate({opacity: 1}, 1000);
+    $("#projects1").animate({opacity: 1}, 1000);
+    $(".home").animate({opacity: 1}, 1000);
+    $("#contactme").animate({opacity: 1}, 1000); 
+    $(".footer").animate({opacity: 1}, 1000);
+    return false;
+}
+
+$(".closemenu").click(function(){ 
     if (flag == true){
-        var g1 = "G"        
+        $(".closemenu").animate({opacity: 0}, 200);
+        $(".closemenu").addClass("menueffect");
+        $(".menu").animate({opacity: 1}, 200);
+        $(".menu").removeClass("menueffect");
+        $(".sidebar").removeClass("sidebarwidth")
+        var g1 = "G"       
         document.getElementById("g1").innerHTML = g1;
         var m1 = "M"        
         document.getElementById("m1").innerHTML = m1;
@@ -59,14 +111,10 @@ $(".sidebar").mouseleave(function(){
         document.getElementById("facebook").innerHTML = facebook; 
         var linkedin = ""        
         document.getElementById("linkedin").innerHTML = linkedin;
-        $(".sidebar a").removeClass("sidebareffect");   
-        $(".sidebar").animate({width: "15vh"}, 1000);
-        $("#about1").animate({opacity: 1}, 1000);
-        $("#projects1").animate({opacity: 1}, 1000);
-        $(".home").animate({opacity: 1}, 1000);
-        $("#contactme").animate({opacity: 1}, 1000); 
-        $(".footer").animate({opacity: 1}, 1000);
-        flag = false; 
+        $(".sidebar a").removeClass("sidebareffect");  
+        setTimeout(function(){
+            flag = mouseL();
+        }, 200); 
     }
 });
 
@@ -106,7 +154,6 @@ function myLoop3() {
                        
     }, 100)
 }
-
 // Scrolling effects -----------------------------------------------------
 $(window).scroll(function () {
     if ($(this).scrollTop() > 300) {
